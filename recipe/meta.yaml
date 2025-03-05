@@ -43,8 +43,8 @@ about:
   license: PostgreSQL
   license_family: OTHER
   license_file: LICENSE.txt
-  home: https://www.libmeos.com/
-  doc_url: https://www.libmeos.com/
+  home: https://libmeos.org
+  doc_url: https://libmeos.org
   dev_url: https://github.com/MobilityDB/MobilityDB
 
 extra:
