@@ -18,8 +18,9 @@ requirements:
     - cmake
     - make
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    # - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - geos
   host:
     - proj
     - json-c
