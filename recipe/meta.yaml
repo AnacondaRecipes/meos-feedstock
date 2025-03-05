@@ -18,9 +18,7 @@ requirements:
     - cmake
     - make
     - {{ compiler('c') }}
-    # - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - geos
   host:
     - proj
     - json-c
@@ -43,6 +41,7 @@ about:
     spatiotemporal data. It is the core component of MobilityDB, an open source geospatial trajectory data management & 
     analysis platform built on top of PostgreSQL and PostGIS.
   license: PostgreSQL
+  license_family: OTHER
   license_file: LICENSE.txt
   home: https://www.libmeos.com/
   doc_url: https://www.libmeos.com/
