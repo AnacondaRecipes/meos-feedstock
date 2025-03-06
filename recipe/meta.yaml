@@ -27,6 +27,11 @@ requirements:
     - openblas
     - libpq
     - geos
+    - gdal
+    - libxml2
+    - protobuf
+    - gettext
+    - icu
   run:
     - geos
 
