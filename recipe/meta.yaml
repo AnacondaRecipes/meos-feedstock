@@ -10,6 +10,7 @@ source:
   sha256: 16148e8eba25fc364ed8feb00d3359f0a6249eb0a6e7c54c53598c73b87ba391
 
 build:
+  # For win, we don't have gettext, openblas 0.3.21.* and postgis
   skip: true  # [win or s390x]
   number: 0
 
