@@ -21,25 +21,25 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - proj {{ proj }}
-    - json-c
-    - gsl
-    - postgis
-    - openblas {{ openblas }}
-    - libpq
+    - gdal {{ libgdal }}
     - geos {{ geos }}
-    - gdal
+    - gettext
+    - gsl
+    - icu {{ icu }}
+    - json-c
+    - libpq
     - libxml2 {{ libxml2 }}
+    - openblas {{ openblas }}
+    - postgis
+    - proj {{ proj }}
     - protobuf
+  run:
+    - geos {{ geos }}
+    - gdal {{ libgdal }}
     - gettext
     - icu {{ icu }}
-  run:
-    - geos
-    - gdal
-    - libxml2
+    - libxml2 {{ libxml2 }}
     - protobuf
-    - gettext
-    - icu
 
 test:
   commands:
