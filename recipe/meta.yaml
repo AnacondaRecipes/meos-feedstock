@@ -23,16 +23,17 @@ requirements:
   host:
     - gdal {{ libgdal }}
     - geos {{ geos }}
-    - gettext
-    - gsl
+    - gettext 0.21
+    - gsl 2.7.1
     - icu {{ icu }}
-    - json-c
-    - libpq
+    - json-c 0.16
+    - libpq 17.4
     - libxml2 {{ libxml2 }}
     - openblas {{ openblas }}
-    - postgis
+    - postgis 3.5.2
     - proj {{ proj }}
-    - protobuf
+    - protobuf 4.25.3
+
   run:
     - geos {{ geos }}
     - gdal {{ libgdal }}
