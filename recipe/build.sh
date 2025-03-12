@@ -7,6 +7,7 @@ cmake ${CMAKE_ARGS} \
         -D CMAKE_BUILD_TYPE=Release \
         -D CMAKE_INSTALL_PREFIX=${PREFIX} \
         -D CMAKE_INSTALL_LIBDIR=lib \
+        -D CMAKE_FIND_FRAMEWORK=LAST \
         -D MEOS=on \
         -D GSL_INCLUDE_DIR=${PREFIX}/include \
         -D GSL_LIBRARY=${PREFIX}/lib/libgsl${SHLIB_EXT} \

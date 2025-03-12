@@ -10,7 +10,8 @@ source:
   sha256: 16148e8eba25fc364ed8feb00d3359f0a6249eb0a6e7c54c53598c73b87ba391
 
 build:
-  skip: true  # [win]
+  # For win, we don't have gettext, openblas 0.3.21.* and postgis
+  skip: true  # [win or s390x]
   number: 0
 
 requirements:
@@ -18,18 +19,28 @@ requirements:
     - cmake
     - make
     - {{ compiler('c') }}
-    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
-    - proj
-    - json-c
-    - gsl
-    - postgis
-    - libcblas
-    - libpq
-    - geos
+    - gdal {{ libgdal }}
+    - geos {{ geos }}
+    - gettext 0.21
+    - gsl 2.7.1
+    - icu {{ icu }}
+    - json-c 0.16
+    - libpq 17.4
+    - libxml2 {{ libxml2 }}
+    - openblas {{ openblas }}
+    - postgis 3.5.2
+    - proj {{ proj }}
+    - protobuf 4.25.3
+
   run:
-    - geos
+    - geos {{ geos }}
+    - gdal {{ libgdal }}
+    - gettext
+    - icu {{ icu }}
+    - libxml2 {{ libxml2 }}
+    - protobuf
 
 test:
   commands:
@@ -42,9 +53,10 @@ about:
     spatiotemporal data. It is the core component of MobilityDB, an open source geospatial trajectory data management & 
     analysis platform built on top of PostgreSQL and PostGIS.
   license: PostgreSQL
+  license_family: OTHER
   license_file: LICENSE.txt
-  home: https://www.libmeos.com/
-  doc_url: https://www.libmeos.com/
+  home: https://libmeos.org
+  doc_url: https://libmeos.org
   dev_url: https://github.com/MobilityDB/MobilityDB
 
 extra:
